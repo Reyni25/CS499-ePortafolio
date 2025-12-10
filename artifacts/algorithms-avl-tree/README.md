@@ -17,7 +17,7 @@ algorithms-avl-tree/
 
 
 
-# Original Project Summary
+### Original Project Summary
 
 In the original project, I built:
 
