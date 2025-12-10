@@ -85,17 +85,6 @@ An explanation of how balance is maintained
 
 This helps peers and instructors easily follow the algorithm.
 
-### How to Run
-
-### 1. Open the project folder in a C++ environment (VS Code, CLion, etc.)
-
-### 2. Compile using a standard C++ compiler:
-```
-g++ main.cpp -o coursePlanner
-```
-
-### 3. Place the input file in the same directory.
-
 ### Skills Demonstrated
 
 ✔ Strong grasp of data structures
@@ -107,6 +96,17 @@ g++ main.cpp -o coursePlanner
 ✔ Clear communication of algorithm behavior
 
 ✔ Structuring code for readability and maintainability
+
+### How to Run
+
+### 1. Open the project folder in a C++ environment (VS Code, CLion, etc.)
+
+### 2. Compile using a standard C++ compiler:
+```
+g++ main.cpp -o coursePlanner
+```
+
+### 3. Place the input file in the same directory.
 
 ### 4. Run the program:
 ```
