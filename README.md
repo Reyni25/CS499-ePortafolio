@@ -11,7 +11,7 @@ Welcome to my CS 499 Capstone ePortfolio. This portfolio showcases my enhanced t
 # Professional Self-Assessment  
 My professional self-assessment serves as an introduction to my skills, accomplishments, and development throughout the program.
 
-**[Download Professional Self-Assessment](narratives/My Professional Self Assessment_LynneskaRivera.docx/)**
+**[Download Professional Self-Assessment](narratives/My_Professional_Self_Assessment_LynneskaRivera.docx)**
 
 ---
 
