@@ -19,6 +19,7 @@ Original Project Summary
 ### Artifact Structure
 
 databases-grazioso-mongodb/
+
 ├── original/ # Original CS 340 CRUD module + Jupyter notebook
 ├── enhanced/ # Enhanced CRUD logic, authentication steps, and notebook workflow
 └── README.md # Overview + enhancement summary
