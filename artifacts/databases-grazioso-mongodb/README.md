@@ -47,7 +47,7 @@ Authentication setup for MongoDB
 ### Improved structure for analysis
 Enhancements for CS 499
 
-1. Improved CRUD Module
+### 1. Improved CRUD Module
 
 I strengthened the CRUD class by:
 
@@ -60,7 +60,7 @@ Adding validation before DB operations
 Standardizing return structures for consistency
 
 
-2. MongoDB Authentication Setup
+### 2. MongoDB Authentication Setup
 
 I configured a secure MongoDB user and updated the connection string accordingly:
 
@@ -71,7 +71,7 @@ Permissions limited to the relevant database
 Secure connection flow aligned with MongoDB best practices
 
 
-3. Updated Jupyter Notebook Workflow
+### 3. Updated Jupyter Notebook Workflow
 
 I reorganized the notebook to:
 
@@ -97,3 +97,9 @@ Open the Jupyter Notebook
 Update the connection string with your credentials
 
 Run the CRUD testing cells
+
+### Narrative Document
+Located at:
+```
+/narratives/databases-grazioso.docx
+```
