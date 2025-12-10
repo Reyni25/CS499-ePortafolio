@@ -41,7 +41,7 @@ Some height calculations were inconsistent
 
 ### Enhancements for CS 499
 
-1. Improved Rotation Logic
+### 1. Improved Rotation Logic
 
 I refined and corrected the four AVL rotation types:
 
@@ -61,7 +61,7 @@ No height desynchronization
 
 Correct handling of complex imbalance cases
 
-2. Strengthened Height & Balance Factor Calculations
+### 2. Strengthened Height & Balance Factor Calculations
 
 I improved the functions governing:
 
@@ -73,7 +73,7 @@ Balance factor computation
 
 This reduced errors and improved data integrity.
 
-3. Added Detailed Documentation and Comments
+### 3. Added Detailed Documentation and Comments
 
 To make the algorithm accessible and professional, I added:
 
