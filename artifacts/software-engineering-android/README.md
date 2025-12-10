@@ -84,6 +84,16 @@ Mock repositories
 
 Decoupled business logic
 
+### Skills Demonstrated
+
+✔ Software engineering best practices
+✔ Secure mobile authentication
+✔ Android app architecture (MVVM)
+✔ Local data persistence with Room
+✔ Code refactoring & modularization
+✔ Testable architecture design
+✔ Use of modern Android Jetpack components
+
 ### How to Run the Enhanced Version
 
 Download the ZIP from the enhanced folder
@@ -95,3 +105,9 @@ Let Gradle sync
 Run on an emulator or physical device
 
 Use the login screen to authenticate and access inventory management features
+
+### Narrative Document
+The detailed enhancement narrative for this artifact is included in the /narratives directory:
+```
+narratives/Artifact Narrative 1_Android Mobile App_LynneskaRivera.docx
+```
