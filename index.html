@@ -6,101 +6,230 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg1: #050016;
-      --bg2: #240044;
-      --accent: #ff4fd8;
-      --accent2: #9b5bff;
-      --text: #f5f5ff;
-      --muted: #b9b9d9;
-      --card-bg: #0d081b;
-      --border: #282240;
+      --bg-dark: #050818;
+      --bg-soft: #091022;
+      --pink: #ffb6e6;
+      --pink-strong: #ff6ac9;
+      --blue: #b8e7ff;
+      --blue-strong: #4bc3ff;
+      --white: #fdfdff;
+      --muted: #c0c6e6;
+      --glass: rgba(10, 15, 40, 0.6);
+      --border: rgba(255, 255, 255, 0.15);
+      --shadow: 0 24px 60px rgba(5, 10, 30, 0.8);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
     }
 
     body {
       min-height: 100vh;
-      background: radial-gradient(circle at top right, var(--bg2), var(--bg1) 55%);
-      color: var(--text);
+      background: radial-gradient(circle at top left, #162341 0, #050818 55%);
+      color: var(--white);
       display: flex;
       flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
     }
 
-    /* Hero */
-    .hero {
-      padding: 4rem 1.5rem 2rem;
-      text-align: center;
+    /* floating pastel blobs */
+    .blob {
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(45px);
+      opacity: 0.7;
+      z-index: -1;
+      animation: float 16s ease-in-out infinite alternate;
     }
 
-    .hero-small {
-      font-size: 0.95rem;
+    .blob-pink {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, var(--pink), transparent 65%);
+      top: -80px;
+      right: -60px;
+    }
+
+    .blob-blue {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, var(--blue), transparent 70%);
+      bottom: -80px;
+      left: -40px;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+      to {
+        transform: translate3d(30px, -20px, 0);
+      }
+    }
+
+    header {
+      padding: 1.2rem 1.5rem 0.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 700;
       letter-spacing: 0.12em;
+      font-size: 0.9rem;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 0.75rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: var(--muted);
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: rgba(12, 18, 45, 0.7);
+      transition: all 0.18s ease;
+    }
+
+    .nav-link:hover {
+      border-color: var(--pink);
+      color: var(--white);
+    }
+
+    .hero {
+      text-align: left;
+      padding: 3rem 1.5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
     }
 
     .hero-title {
-      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-size: clamp(2.3rem, 4vw, 3.2rem);
       font-weight: 800;
       line-height: 1.1;
-      margin-bottom: 0.75rem;
+      max-width: 700px;
+      margin-bottom: 1rem;
     }
 
-    .hero-highlight {
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    .highlight-pink {
+      background: linear-gradient(120deg, var(--pink), var(--pink-strong));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
-    .hero-subtitle {
-      font-size: 1rem;
-      max-width: 700px;
-      margin: 0 auto;
+    .highlight-blue {
+      background: linear-gradient(120deg, var(--blue), var(--blue-strong));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      max-width: 640px;
       color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .hero-row {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: linear-gradient(
+          135deg,
+          rgba(255, 182, 230, 0.18),
+          rgba(184, 231, 255, 0.12)
+        ),
+        var(--glass);
+      border-radius: 1.5rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.6rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-stat {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      padding: 0.35rem 0.8rem;
+      background: rgba(9, 16, 44, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      margin-bottom: 0.4rem;
+      margin-right: 0.3rem;
     }
 
     .hero-buttons {
-      margin-top: 2rem;
+      margin-top: 1.7rem;
       display: flex;
-      justify-content: center;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 0.75rem;
     }
 
     .btn {
-      border: 1px solid var(--border);
-      padding: 0.75rem 1.4rem;
       border-radius: 999px;
-      font-size: 0.95rem;
+      padding: 0.7rem 1.3rem;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
       text-decoration: none;
-      color: var(--text);
+      color: var(--white);
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(6, 3, 25, 0.9);
-      backdrop-filter: blur(6px);
-      transition: all 0.2s ease;
+      background: rgba(7, 10, 35, 0.9);
+      backdrop-filter: blur(10px);
+      transition: all 0.18s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      background: linear-gradient(120deg, var(--pink), var(--blue));
       border-color: transparent;
-      color: #fff;
+      color: #061025;
     }
 
     .btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55);
     }
 
-    /* Main content */
     main {
       padding: 1rem 1.5rem 3rem;
       max-width: 1100px;
@@ -108,37 +237,46 @@
       width: 100%;
     }
 
+    .section {
+      margin-top: 2.5rem;
+    }
+
     .section-title {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 1.4rem;
+      margin-top: 1.4rem;
     }
 
     .card {
-      background: rgba(6, 3, 25, 0.9);
-      border-radius: 1rem;
-      padding: 1.25rem 1.3rem;
+      background: var(--glass);
+      border-radius: 1.3rem;
+      padding: 1.3rem 1.4rem 1.1rem;
       border: 1px solid var(--border);
-      box-shadow: 0 18px 35px rgba(3, 0, 10, 0.55);
-    }
-
-    .card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.25rem;
+      box-shadow: 0 16px 40px rgba(3, 3, 20, 0.7);
+      backdrop-filter: blur(14px);
     }
 
     .badge {
-      display: inline-block;
-      font-size: 0.7rem;
+      font-size: 0.73rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
       margin-bottom: 0.4rem;
     }
 
@@ -166,17 +304,33 @@
     .pill-link {
       font-size: 0.8rem;
       text-decoration: none;
-      color: var(--accent2);
-      background: rgba(24, 18, 55, 0.9);
+      color: #061025;
+      background: linear-gradient(120deg, var(--blue), var(--pink));
       padding: 0.35rem 0.8rem;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      transition: background 0.2s ease, color 0.2s ease;
+      border: none;
+      transition: filter 0.18s ease, transform 0.18s ease;
     }
 
     .pill-link:hover {
-      background: var(--accent2);
-      color: #fff;
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .skills-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.8rem;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.72rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(10, 14, 40, 0.95);
+      color: var(--muted);
     }
 
     footer {
@@ -188,44 +342,81 @@
     }
 
     a {
-      color: var(--accent2);
+      color: var(--blue-strong);
     }
 
-    @media (max-width: 600px) {
-      .hero {
-        padding-top: 3rem;
+    @media (max-width: 820px) {
+      .hero-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-card {
+        order: -1;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
+  <div class="blob blob-pink"></div>
+  <div class="blob blob-blue"></div>
+
+  <header>
+    <div class="logo">LYNNESKA · CS 499</div>
+    <nav>
+      <a class="nav-link" href="#artifacts">Artifacts</a>
+      <a class="nav-link" href="narratives/My_Professional_Self_Assessment_LynneskaRivera.docx">Self-Assessment</a>
+      <a class="nav-link" href="#code-review">Code Review</a>
+      <a class="nav-link" href="https://github.com/Reyni25/CS499-ePortafolio">GitHub Repo</a>
+    </nav>
+  </header>
 
   <section class="hero">
-    <div class="hero-small">Hi, I'm Lynneska.</div>
-    <h1 class="hero-title">
-      I design and build <span class="hero-highlight">secure, modern software</span><br/>
-      across mobile, web, and data systems.
-    </h1>
-    <p class="hero-subtitle">
-      This CS 499 capstone portfolio highlights my strongest work in software engineering,
-      algorithms and data structures, and databases, showing how I’ve grown into a
-      security-minded, full-stack oriented developer.
-    </p>
+    <div class="hero-row">
+      <div>
+        <div class="tagline">Hi, I'm Lynneska.</div>
+        <h1 class="hero-title">
+  I engineer <span class="highlight-pink">secure, scalable solutions</span>
+  using <span class="highlight-blue">modern software practices.</span>
+</h1>
+        <p class="hero-sub">
+          This CS 499 capstone portfolio highlights my strongest work in mobile development,
+          algorithms and data structures, and databases. Each artifact shows how I’ve grown
+          into a security-minded, detail-oriented developer who cares about both user
+          experience and reliable architecture.
+        </p>
 
-    <div class="hero-buttons">
-      <a class="btn btn-primary" href="#artifacts">View Enhanced Artifacts</a>
-      <a class="btn" href="narratives/My_Professional_Self_Assessment_LynneskaRivera.docx">
-        📄 Professional Self-Assessment
-      </a>
-      <a class="btn" href="https://github.com/Reyni25/CS499-ePortafolio">
-        🧾 View Source on GitHub
-      </a>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#artifacts">✨ View Enhanced Artifacts</a>
+          <a class="btn" href="narratives/My_Professional_Self_Assessment_LynneskaRivera.docx">
+            📄 Professional Self-Assessment
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-stat">CS 499 · Capstone Focus</div>
+        <div class="hero-pill">Software Engineering & Design</div>
+        <div class="hero-pill">Algorithms & Data Structures</div>
+        <div class="hero-pill">Databases & Security</div>
+        <p style="font-size:0.9rem; color:var(--muted); margin-top:0.6rem;">
+          I specialize in turning messy or incomplete code into clean, secure, and
+          maintainable systems. My enhancements focus on architecture (MVVM),
+          balanced data structures, NoSQL CRUD design, and strong authentication practices.
+        </p>
+      </div>
     </div>
   </section>
 
   <main>
-    <section id="artifacts">
+    <section id="artifacts" class="section">
       <h2 class="section-title">Featured CS 499 Artifacts</h2>
+      <p class="section-sub">
+        Each artifact below started as a course project and was elevated in this capstone
+        to meet professional standards in structure, security, and documentation.
+      </p>
 
       <div class="grid">
         <!-- Android -->
@@ -233,8 +424,8 @@
           <div class="badge">Software Engineering & Design · CS 360</div>
           <h3>Android Inventory & Login App</h3>
           <p>
-            A refactored Android application using MVVM, Room, and PBKDF2 password hashing to
-            provide secure login and persistent inventory management.
+            A refactored Android application using MVVM, Room, and PBKDF2 password hashing
+            to deliver secure login and persistent inventory management.
           </p>
           <ul>
             <li>Converted legacy activity-driven code into MVVM architecture</li>
@@ -252,13 +443,13 @@
           <div class="badge">Algorithms & Data Structures · CS 300</div>
           <h3>AVL Tree Course Planner</h3>
           <p>
-            A self-balancing AVL tree implementation that stores and displays course data
-            while maintaining O(log n) operations and clear, documented rotations.
+            A self-balancing AVL tree that stores and displays course data while maintaining
+            O(log n) performance and clearly documented rotation logic.
           </p>
           <ul>
-            <li>Fixed and clarified LL, RR, LR, and RL rotations</li>
-            <li>Improved height and balance factor calculations</li>
-            <li>Documented recursive logic for readability and maintainability</li>
+            <li>Corrected LL, RR, LR, and RL rotations for full AVL compliance</li>
+            <li>Strengthened height and balance factor calculations</li>
+            <li>Documented recursive logic to support future maintenance</li>
           </ul>
           <div class="card-links">
             <a class="pill-link" href="artifacts/algorithms-avl-tree/">📂 Artifact files</a>
@@ -275,9 +466,9 @@
             Notebook workflow for data exploration and future visual dashboards.
           </p>
           <ul>
-            <li>Hardened CRUD logic with validation and error handling</li>
+            <li>Hardened CRUD logic with input validation and error handling</li>
             <li>Configured MongoDB authentication and least-privilege user roles</li>
-            <li>Reorganized notebook for analysis vs. CRUD testing and visualization prep</li>
+            <li>Reorganized notebook for CRUD testing vs. analysis and visualization prep</li>
           </ul>
           <div class="card-links">
             <a class="pill-link" href="artifacts/databases-grazioso-mongodb/">📂 Artifact files</a>
@@ -287,24 +478,27 @@
       </div>
     </section>
 
-    <section style="margin-top:2.5rem;">
+    <section id="code-review" class="section">
       <h2 class="section-title">Code Review & Skills</h2>
-      <p style="color: var(--muted); font-size:0.95rem; max-width:800px;">
-        As part of the CS 499 capstone, I completed a video code review that walks through my
-        original artifacts, identifies areas for improvement, and explains how each enhancement
-        aligns with course outcomes.
+      <p class="section-sub">
+        As part of the CS 499 capstone, I completed a video code review that walks through
+        my original artifacts, identifies areas for improvement, and explains how each
+        enhancement aligns with course outcomes.
       </p>
-      <p style="margin-top:0.75rem;">
+      <p style="margin-top:0.9rem;">
         📹 <a href="https://drive.google.com/file/d/1DT7sQiRyyHcVPXGYKVxz3MoGr56OG_02/view?usp=drive_link">
         Watch my code review video</a>
       </p>
 
-      <p style="color: var(--muted); font-size:0.9rem; margin-top:1.4rem;">
-        Core skills demonstrated across these projects include:
-        software engineering and refactoring, Android mobile development, secure coding
-        practices, data structures and algorithms, NoSQL databases with MongoDB, and
-        clear technical communication through documentation and narratives.
-      </p>
+      <div class="skills-chips">
+        <span class="chip">Android · MVVM · Room</span>
+        <span class="chip">PBKDF2 & secure authentication</span>
+        <span class="chip">AVL trees & recursion</span>
+        <span class="chip">MongoDB · CRUD · Atlas</span>
+        <span class="chip">Jupyter Notebook workflows</span>
+        <span class="chip">Refactoring & clean code</span>
+        <span class="chip">Technical documentation</span>
+      </div>
     </section>
   </main>
 
@@ -317,4 +511,3 @@
   </script>
 </body>
 </html>
-
