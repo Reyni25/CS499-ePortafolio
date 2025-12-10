@@ -16,6 +16,14 @@ Jupyter Notebook
 It manages a dataset of rescue animals for Grazioso Salvare and supports full Create, Read, Update, and Delete operations.
 Original Project Summary
 
+# Artifact Structure
+
+databases-grazioso-mongodb/
+│── original/      # Original CS 340 CRUD module + notebook
+│── enhanced/      # Enhanced CRUD logic, auth, and notebook org
+│── README.md
+
+
 # In the original version, the application:
 
 Loaded CSV animal data
