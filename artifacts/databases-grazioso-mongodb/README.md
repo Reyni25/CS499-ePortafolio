@@ -101,5 +101,5 @@ Run the CRUD testing cells
 ### Narrative Document
 Located at:
 ```
-/narratives/databases-grazioso.docx
+narratives/Artifact Narrative 3_Grazioso Salvare MongoDB Dashboard_LynneskaRivera.docx
 ```
