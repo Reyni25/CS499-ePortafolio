@@ -94,7 +94,7 @@ Each artifact below includes:
 - Prepared structure for future **data visualizations and dashboards**  
 
  **Artifact Files:**  
-📂 [Open Grazioso Salvare Artifact Folder](artifacts/databases-grazioso-mongodb/)  
+ [Open Grazioso Salvare Artifact Folder](artifacts/databases-grazioso-mongodb/)  
 
  **Narrative:**  
 [Artifact Narrative 3 – Grazioso Salvare MongoDB Dashboard](narratives/Artifact%20Narrative%203_Grazioso%20Salvare%20MongoDB%20Dashboard_LynneskaRivera.docx)  
