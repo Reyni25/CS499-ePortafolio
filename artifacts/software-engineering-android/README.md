@@ -1,5 +1,5 @@
 # Android Inventory & Login App 
-# Overview
+### Overview
 
 This artifact is an enhanced version of my Android Inventory and Login Application originally created for CS 360 – Mobile Architecture and Programming. The project demonstrates my skills in mobile software engineering, secure application design, architectural refactoring, and database integration using modern Android component libraries.
 
