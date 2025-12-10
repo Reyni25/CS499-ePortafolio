@@ -6,6 +6,14 @@ This artifact represents my work from CS 300 – Data Structures and Algorithms,
 
 The program loads course information, inserts nodes into the AVL tree, and provides in-order traversal to display courses alphabetically.
 
+# Artifact Structure
+
+algorithms-avl-tree/
+│── original/     # Original CS 300 implementation
+│── enhanced/     # Improved AVL version for CS 499
+│── README.md
+
+
 # Original Project Summary
 
 In the original project, I built:
