@@ -5,14 +5,16 @@ This artifact is an enhanced version of my Android Inventory and Login Applicati
 
 The enhanced version incorporates significant improvements to code structure, security, maintainability, and usability.
 
-# Artifact Structure
-software-engineering-android/
-│── original/        # Original CS 360 project files
-│── enhanced/        # Enhanced CS 499 version (Room DB, MVVM, PBKDF2)
-│── README.md
+### Artifact Structure
+```
+algorithms-avl-tree/
+├── CS300_ProjectTwo.zip              # Original CS 300 submission
+├── CS300_ProjectTwo_Enhanced.zip     # Enhanced AVL tree implementation for CS 499
+└── README.md                         # Overview + enhancement summary
+```
 
 
-# Original Project Summary
+### Original Project Summary
 
 The original Android app implemented basic functionality for:
 
@@ -26,9 +28,9 @@ Temporary in-memory storage (no database)
 
 While functional, the structure was not scalable and lacked modern Android architecture or secure authentication practices.
 
-# For the capstone, I performed the following software engineering improvements:
+### For the capstone, I performed the following software engineering improvements:
 
-#  1. Refactored to MVVM Architecture
+###  1. Refactored to MVVM Architecture
 
 Reorganized the entire application using Model–View–ViewModel (MVVM) to:
 
@@ -40,7 +42,7 @@ Improve testability
 
 Align with Android best practices
 
-# 2. Integrated Room Database
+### 2. Integrated Room Database
 
 Added a persistent Room SQLite database:
 
@@ -52,7 +54,7 @@ Eliminates dependency on in-memory lists
 
 Supports offline functionality
 
-# 3. Implemented PBKDF2 Password Hashing
+### 3. Implemented PBKDF2 Password Hashing
 
 Replaced plain-text login checks with:
 
@@ -64,7 +66,7 @@ OWASP-aligned password protection
 
 Avoids security vulnerabilities common in mobile apps
 
-# 4. Improved Code Quality and Organization
+### 4. Improved Code Quality and Organization
 
 Added detailed comments and documentation
 
@@ -74,7 +76,7 @@ Improved lifecycle handling
 
 Added ViewModels for inventory and authentication
 
-# 5. Prepared JUnit testing structure
+### 5. Prepared JUnit testing structure
 
 Created a foundation for ViewModel-level JUnit tests using:
 
@@ -82,7 +84,7 @@ Mock repositories
 
 Decoupled business logic
 
-# How to Run the Enhanced Version
+### How to Run the Enhanced Version
 
 Download the ZIP from the enhanced folder
 
