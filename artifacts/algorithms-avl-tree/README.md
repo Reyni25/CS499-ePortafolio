@@ -96,7 +96,24 @@ g++ main.cpp -o coursePlanner
 
 ### 3. Place the input file in the same directory.
 
+### Skills Demonstrated
+
+✔ Strong grasp of data structures
+
+✔ Mastery of algorithmic complexity (O(log n))
+
+✔ Ability to debug and optimize recursive logic
+
+✔ Clear communication of algorithm behavior
+
+✔ Structuring code for readability and maintainability
+
 ### 4. Run the program:
 ```
 ./coursePlanner
+```
+### Narrative Document
+Located at:
+```
+narratives/Artifact Narrative 2_AVL Tree Course Planner_LynneskaRivera.docx
 ```
