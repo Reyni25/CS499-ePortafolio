@@ -1,5 +1,5 @@
 # Grazioso Salvare MongoDB Artifact
-Overview
+### Overview
 
 This artifact was originally created for CS 340 – Client/Server Development and expanded for CS 499 to demonstrate advanced database design, CRUD logic, authentication, and professional data workflow management.
 
