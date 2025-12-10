@@ -1,17 +1,20 @@
 # AVL Tree Artifact
 
-# Overview
+### Overview
 
 This artifact represents my work from CS 300 – Data Structures and Algorithms, enhanced for CS 499 to demonstrate mastery of algorithmic complexity, balanced tree structures, and performance-oriented design. The project implements an AVL Tree, a self-balancing binary search tree used for efficient data lookup and insertion.
 
 The program loads course information, inserts nodes into the AVL tree, and provides in-order traversal to display courses alphabetically.
 
-# Artifact Structure
+### Artifact Structure
 
+```
 algorithms-avl-tree/
-│── original/     # Original CS 300 implementation
-│── enhanced/     # Improved AVL version for CS 499
-│── README.md
+├── CS300_ProjectTwo.zip              # Original CS 300 submission
+├── CS300_ProjectTwo_Enhanced.zip     # Enhanced AVL tree implementation for CS 499
+└── README.md                         # Overview + enhancement summary
+```
+
 
 
 # Original Project Summary
@@ -36,7 +39,7 @@ Documentation for rotations was limited
 
 Some height calculations were inconsistent
 
-# Enhancements for CS 499
+### Enhancements for CS 499
 
 1. Improved Rotation Logic
 
@@ -82,17 +85,18 @@ An explanation of how balance is maintained
 
 This helps peers and instructors easily follow the algorithm.
 
-# How to Run
+### How to Run
 
-Open the project folder in a C++ environment (VS Code, CLion, etc.)
+### 1. Open the project folder in a C++ environment (VS Code, CLion, etc.)
 
-Compile using a standard C++ compiler:
-
+### 2. Compile using a standard C++ compiler:
+```
 g++ main.cpp -o coursePlanner
+```
 
+### 3. Place the input file in the same directory.
 
-Place the input file in the same directory.
-
-Run the program:
-
+### 4. Run the program:
+```
 ./coursePlanner
+```
