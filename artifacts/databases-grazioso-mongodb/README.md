@@ -45,7 +45,7 @@ Better query design
 Authentication setup for MongoDB
 
 ### Improved structure for analysis
-Enhancements for CS 499
+### Enhancements for CS 499
 
 ### 1. Improved CRUD Module
 
@@ -82,6 +82,20 @@ Add placeholder visualization cells (charts, filters, etc.)
 Improve Markdown explanation and usability
 
 The notebook is now significantly more readable and ready for analysis/expansion.
+
+### Skills Demonstrated
+
+✔ NoSQL database design
+
+✔ Secure database authentication
+
+✔ Python programming & exception handling
+
+✔ CRUD logic and DB operations
+
+✔ Data analysis workflow design
+
+✔ Documentation and user guidance
 
 ### How to Run
 
