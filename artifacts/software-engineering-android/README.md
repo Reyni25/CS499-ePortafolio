@@ -87,12 +87,19 @@ Decoupled business logic
 ### Skills Demonstrated
 
 ✔ Software engineering best practices
+
 ✔ Secure mobile authentication
+
 ✔ Android app architecture (MVVM)
+
 ✔ Local data persistence with Room
+
 ✔ Code refactoring & modularization
+
 ✔ Testable architecture design
+
 ✔ Use of modern Android Jetpack components
+
 
 ### How to Run the Enhanced Version
 
