@@ -5,6 +5,13 @@ This artifact is an enhanced version of my Android Inventory and Login Applicati
 
 The enhanced version incorporates significant improvements to code structure, security, maintainability, and usability.
 
+# Artifact Structure
+software-engineering-android/
+│── original/        # Original CS 360 project files
+│── enhanced/        # Enhanced CS 499 version (Room DB, MVVM, PBKDF2)
+│── README.md
+
+
 # Original Project Summary
 
 The original Android app implemented basic functionality for:
@@ -74,3 +81,15 @@ Created a foundation for ViewModel-level JUnit tests using:
 Mock repositories
 
 Decoupled business logic
+
+# How to Run the Enhanced Version
+
+Download the ZIP from the enhanced folder
+
+Extract into Android Studio
+
+Let Gradle sync
+
+Run on an emulator or physical device
+
+Use the login screen to authenticate and access inventory management features
