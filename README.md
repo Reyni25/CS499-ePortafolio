@@ -130,7 +130,7 @@ As part of CS 499, I completed a code review that walks through my original arti
 If you would like to connect or learn more about my work:
 
 -  Email: reynirivera9@gmail.com
-- LinkedIn: [Link](https://www.linkedin.com/in/lynneska-rivera-perez-a0b727206/) 
+- LinkedIn: [Link](/https://www.linkedin.com/in/lynneska-rivera-perez-a0b727206/) 
 
 Thank you for taking the time to review my CS 499 Capstone ePortfolio.
 
