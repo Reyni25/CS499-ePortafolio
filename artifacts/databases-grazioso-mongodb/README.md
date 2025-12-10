@@ -23,7 +23,7 @@ databases-grazioso-mongodb/
 ├── enhanced/ # Enhanced CRUD logic, authentication steps, and notebook workflow
 └── README.md # Overview + enhancement summary
 
-# In the original version, the application:
+### In the original version, the application:
 
 Loaded CSV animal data
 
@@ -41,7 +41,7 @@ Better query design
 
 Authentication setup for MongoDB
 
-# Improved structure for analysis
+### Improved structure for analysis
 Enhancements for CS 499
 
 1. Improved CRUD Module
@@ -80,7 +80,7 @@ Improve Markdown explanation and usability
 
 The notebook is now significantly more readable and ready for analysis/expansion.
 
-# How to Run
+### How to Run
 
 Install MongoDB locally OR connect to a remote MongoDB Atlas instance
 
