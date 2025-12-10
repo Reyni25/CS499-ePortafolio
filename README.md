@@ -32,6 +32,7 @@ A fully enhanced Android mobile application featuring MVVM architecture, Room da
 **[View Artifact Folder](artifacts/software-engineering-android/)**  
 **[Narrative](narratives/Artifact Narrative 1_Android Mobile App_LynneskaRivera.docx)**  
 
+
 ---
 
 ## 2️ Algorithms & Data Structures  
